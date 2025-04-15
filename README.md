@@ -16,7 +16,7 @@ docker-compose --env-file .env -f docker-compose.yml up --build
 ### На убунте то же самое просто поменять в `.env` и `nginx` запустить рядом 
 
 ### Чтобы затестить локально
-* Superuser уже есть `123:123` / `Логин:Пароль`
+* Superuser уже есть `123:123` / `Логин:Пароль`  _Создается автоматически для упрощения теста_
 * Чтобы не ждать пока номера сами обновятся через запланированные задачи, 
   нужно в админке выполнить ежедневную таску [daily-update-phone-data](http://localhost:8000/admin/django_celery_beat/periodictask/).
   <br>Выбираем `daily-update-phone-data`, в Action выбираем `Run select task`
