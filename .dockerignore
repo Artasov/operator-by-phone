@@ -1,0 +1,25 @@
+# Исключаем виртуальные окружения
+venv
+.env
+
+# Python кэш
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE и системные
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Git
+.git
+.gitignore
+
+# Лишние логи
+*.log
+logs/
+poetry.lock

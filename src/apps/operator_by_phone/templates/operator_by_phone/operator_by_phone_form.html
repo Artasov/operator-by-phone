@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Проверка номера телефона</title>
+</head>
+<body>
+<h1>Форма проверки номера телефона</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.phone_number.label_tag }}<br>
+    {{ form.phone_number }}<br><br>
+    <input type="submit" value="Проверить"/>
+</form>
+
+{% if phone %}
+    <hr>
+    <h3>Результат проверки для номера: {{ phone }}</h3>
+    {% if operator and region %}
+        <p>Оператор: {{ operator }}</p>
+        <p>Регион: {{ region }}</p>
+    {% endif %}
+{% endif %}
+
+{% if error %}
+    <hr>
+    <p style="color:red">Ошибка: {{ error }}</p>
+{% endif %}
+</body>
+</html>
