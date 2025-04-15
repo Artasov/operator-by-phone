@@ -1,6 +1,5 @@
-set -e
-
-cd /srv/src
+#!/bin/sh
+cd /srv/src || exit
 
 echo "Waiting for PostgreSQL to be ready..."
 export PGPASSWORD="$DB_PASSWORD"
