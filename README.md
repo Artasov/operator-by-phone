@@ -12,7 +12,8 @@ mv .env.example .env
 docker-compose --env-file .env -f docker-compose.yml up --build
 
 ```
-
+### Дождитесь пока все контейнеры встанут 
+`web` `celery` `beat` `redis` `postgres`
 ### На убунте то же самое просто поменять в `.env` и `nginx` запустить рядом 
 
 ### Чтобы затестить локально
